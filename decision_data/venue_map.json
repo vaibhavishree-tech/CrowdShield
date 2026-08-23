@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "name": "Stage Left",
+      "type": "gathering",
+      "description": "Mosh Pit / Surge Risk",
+      "max_capacity": 800,
+      "coordinates": { "x": 150, "y": 200, "radius": 45 }
+    },
+    {
+      "id": "2",
+      "name": "Front of Stage",
+      "type": "gathering",
+      "description": "Primary High-Risk Zone",
+      "max_capacity": 1500,
+      "coordinates": { "x": 500, "y": 200, "radius": 60 }
+    },
+    {
+      "id": "3",
+      "name": "Stage Right",
+      "type": "gathering",
+      "description": "Crowd Overspill",
+      "max_capacity": 800,
+      "coordinates": { "x": 850, "y": 200, "radius": 45 }
+    },
+    {
+      "id": "4",
+      "name": "Central Field",
+      "type": "gathering",
+      "description": "General Standing Area",
+      "max_capacity": 2000,
+      "coordinates": { "x": 150, "y": 500, "radius": 70 }
+    },
+    {
+      "id": "5",
+      "name": "Food & Restrooms",
+      "type": "transit",
+      "description": "Utility Bottleneck",
+      "max_capacity": 600,
+      "coordinates": { "x": 500, "y": 500, "radius": 40 }
+    },
+    {
+      "id": "6",
+      "name": "First Aid Hub",
+      "type": "medical",
+      "description": "Medical/Emergency",
+      "max_capacity": 300,
+      "coordinates": { "x": 850, "y": 500, "radius": 35 }
+    },
+    {
+      "id": "7",
+      "name": "Main Entrance",
+      "type": "entry_exit",
+      "description": "Entry Turnstiles",
+      "max_capacity": 1000,
+      "coordinates": { "x": 150, "y": 800, "radius": 50 }
+    },
+    {
+      "id": "8",
+      "name": "Central Walkway",
+      "type": "transit",
+      "description": "Primary Flow Channel",
+      "max_capacity": 1200,
+      "coordinates": { "x": 500, "y": 800, "radius": 50 }
+    },
+    {
+      "id": "9",
+      "name": "Emergency Exit",
+      "type": "exit_only",
+      "description": "Egress Path",
+      "max_capacity": 1500,
+      "coordinates": { "x": 850, "y": 800, "radius": 60 }
+    }
+  ],
+  "edges": [
+    { "source": "1", "target": "2", "base_distance": 15, "bidirectional": true },
+    { "source": "1", "target": "4", "base_distance": 15, "bidirectional": true },
+    { "source": "2", "target": "3", "base_distance": 15, "bidirectional": true },
+    { "source": "2", "target": "5", "base_distance": 15, "bidirectional": true },
+    { "source": "3", "target": "6", "base_distance": 15, "bidirectional": true },
+    { "source": "4", "target": "5", "base_distance": 15, "bidirectional": true },
+    { "source": "4", "target": "7", "base_distance": 15, "bidirectional": true },
+    { "source": "5", "target": "6", "base_distance": 15, "bidirectional": true },
+    { "source": "5", "target": "8", "base_distance": 15, "bidirectional": true },
+    { "source": "6", "target": "9", "base_distance": 15, "bidirectional": true },
+    { "source": "7", "target": "8", "base_distance": 15, "bidirectional": true },
+    { "source": "8", "target": "9", "base_distance": 15, "bidirectional": true }
+  ]
+}
