@@ -5,6 +5,7 @@ It imports both stubs and ties them together in a single API endpoint that front
 Manages continuous asynchronous video processing and state endpoints
 """
 
+import traceback
 import torch
 import os
 from fastapi import FastAPI
@@ -60,13 +61,19 @@ def process_video_continuously():
     """
     global latest_perception_data
     while True:
-        # 1. Process the next consecutive frame
-        data,_ = process_frame(frame=None)
-        
-        # 2. Update the global state safely
-        if data:
-            latest_perception_data = data
-            alerts.process_risk_update(data)
+        try:
+            # 1. Process the next consecutive frame
+            data,_ = process_frame(frame=None)
+            
+            # 2. Update the global state safely
+            if data:
+                latest_perception_data = data
+                alerts.process_risk_update(data)
+            else:
+                print("[BACKGROUND WORKER] Warning: process_frame() returned empty data.")
+        except Exception as e:
+            print(f"[BACKGROUND WORKER ERROR] {e}")
+            traceback.print_exc()
             
         # 3. Sleep slightly to mimic ~30 FPS and prevent CPU locking
         time.sleep(0.033)
