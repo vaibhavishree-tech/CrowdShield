@@ -10,9 +10,9 @@ import AuthorityLogin from "./Login";
    BACKEND CONFIG
 ============================================================================ */
 const USE_MOCK_DATA = false; 
-const STATE_ENDPOINT = "http://127.0.0.1:8000/state";   
-const NOTIFY_ENDPOINT = "http://127.0.0.1:8000/notify"; 
-
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
+const STATE_ENDPOINT = `${API_BASE}/state`; 
+const NOTIFY_ENDPOINT = `${API_BASE}/notify`;
 /* ============================================================================
    TOKENS
 ============================================================================ */

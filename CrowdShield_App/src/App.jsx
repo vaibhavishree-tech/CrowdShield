@@ -129,7 +129,7 @@ function generateAlert(zone, allZones) {
    ──────────────────────────────────────────────────────────────── */
 // CONFIRM: point this at wherever your FastAPI backend is actually running.
 // This is a placeholder guess (uvicorn's default local host/port).
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 
 // Maps the backend's numeric zone_id ("1".."9") onto this app's existing
 // named zones. Inferred from tracker.py's row-major 3x3 grid
