@@ -17,6 +17,10 @@ from datetime import datetime
 import os
 from ultralytics import YOLO
 import sys
+import torch
+
+# Dynamically select GPU if available, otherwise fallback to CPU
+DEVICE = 0 if torch.cuda.is_available() else "cpu"
 
 # 1. Video stream setup
 PERCEPTION_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -584,7 +588,7 @@ def process_frame(frame=None):
         classes=[0],
         imgsz=640,
         conf=0.15,
-        device=0,
+        device=DEVICE,
         verbose=False
     )
     result = results[0]
