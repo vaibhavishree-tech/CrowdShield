@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo.png" alt="CrowdShield Logo" width="200" />
+  <img src="logo.svg" alt="CrowdShield Logo" width="200" />
 </div>
 
 # CrowdShield: Real-Time AI-Driven Crowd Safety & Stampede Prevention System
