@@ -10,7 +10,17 @@ CrowdShield is a platform designed to prevent stampedes and crowd crushes at mas
 
 ---
 
-### Live Demo Access
+### Live Demo and Access
+
+#### Demo Links
+
+* **Authority Dashboard**: [View Live Deployment](https://rowdshield-dashboard.vercel.app/)
+
+* **Attendee App**: [View Live Deployment](https://crowd-shield-one.vercel.app/)
+
+
+
+#### Demo Access
 
 * **Authority Dashboard Credentials**: Username: `admin` | Password: `crowd2026`
 
