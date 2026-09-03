@@ -1,4 +1,10 @@
+<div align="center">
+  <img src="logo.png" alt="CrowdShield Logo" width="200" />
+</div>
+
 # CrowdShield: Real-Time AI-Driven Crowd Safety & Stampede Prevention System
+
+**Developed by Team The EdgeRunners**
 
 CrowdShield is a platform designed to prevent stampedes and crowd crushes at mass gatherings using continuous computer vision, graph-based decision-making, and real-time distributed interfaces.
 
@@ -57,6 +63,4 @@ CrowdShield/
 ├── alerts.py                  # State management and API endpoints for UI notifications
 ├── main.py                    # Central FastAPI application entry point
 ├── requirements.txt           
-└── yolo11s.pt                 
-
-```
+└── yolo11s.pt
