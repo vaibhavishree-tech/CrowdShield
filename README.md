@@ -8,6 +8,8 @@
 
 CrowdShield is a platform designed to prevent stampedes and crowd crushes at mass gatherings using continuous computer vision, graph-based decision-making, and real-time distributed interfaces.
 
+For understanding the detailed architecture of the project, please refer to `Detailed_Architecture.docx` in this repository.
+
 ---
 
 ### Live Demo and Access
@@ -72,5 +74,7 @@ CrowdShield/
 ├── Dockerfile                 
 ├── alerts.py                  # State management and API endpoints for UI notifications
 ├── main.py                    # Central FastAPI application entry point
-├── requirements.txt           
+├── requirements.txt
+├── Detailed_Architecture.docx # Detailed architecture of the project           
 └── yolo11s.pt
+
