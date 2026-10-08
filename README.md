@@ -75,6 +75,5 @@ CrowdShield/
 ├── alerts.py                  # State management and API endpoints for UI notifications
 ├── main.py                    # Central FastAPI application entry point
 ├── requirements.txt
-├── Detailed_Architecture.docx # Detailed architecture of the project           
-└── yolo11s.pt
+└── Detailed_Architecture.docx # Detailed architecture of the project           
 
